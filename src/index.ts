@@ -1,10 +1,12 @@
 console.log('hello')
-const number1 = document.getElementById('num1') as HTMLInputElement
-const printButton = document.getElementById('printBtn') as HTMLButtonElement
+const number1 = document.getElementById("num1") as HTMLInputElement
+
+const printButton = document.getElementById("printBtn") as HTMLButtonElement
+const printValue = document.getElementById("enteredNumber") as HTMLOutputElement
 
 
 
-console.log('test')
+
 
 
 
