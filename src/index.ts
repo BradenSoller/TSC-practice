@@ -4,7 +4,7 @@ const printButton = document.getElementById('printBtn') as HTMLButtonElement
 
 
 
-
+console.log('test')
 
 
 
