@@ -1,4 +1,4 @@
-console.log('hello')
+console.log('hell')
 const number1 = document.getElementById("num1") as HTMLInputElement;
 
 const printButton = document.getElementById("printBtn") as HTMLButtonElement;

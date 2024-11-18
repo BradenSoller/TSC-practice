@@ -1,12 +1,11 @@
-"use strict";
 console.log('hell');
-const number1 = document.getElementById("num1");
-const printButton = document.getElementById("printBtn");
-const printValue = document.getElementById("enteredNumber");
+var number1 = document.getElementById("num1");
+var printButton = document.getElementById("printBtn");
+var printValue = document.getElementById("enteredNumber");
 console.log(printButton);
 console.log(printValue);
 function printEnteredValue() {
-    const numb1 = parseFloat(number1.value);
+    var numb1 = parseFloat(number1.value);
     printValue.textContent = numb1.toString();
 }
 ;
@@ -16,4 +15,3 @@ printButton.addEventListener("click", printEnteredValue);
 //     return sum = a + b
 // }
 // console.log(Add(3, 2));
-//# sourceMappingURL=index.js.map
