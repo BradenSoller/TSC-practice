@@ -10,9 +10,10 @@ console.log('hell')
 
 
 
-    function printEnteredValue(): void {
+    function printEnteredValue(): any {
         const numb1 = parseFloat(number1.value);
         printValue.textContent = numb1.toString();
+      
     };
 
     printButton.addEventListener("click", printEnteredValue);
