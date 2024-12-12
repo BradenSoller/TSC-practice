@@ -6,17 +6,24 @@ console.log('hell')
     const printButton = document.getElementById("printBtn") as HTMLButtonElement;
 const printValue = document.getElementById("enteredNumber") as HTMLOutputElement;
 const Timeout = document.getElementById("timeOut") as HTMLButtonElement;
+const printHi = document.getElementById("braden") as HTMLOutputElement;
+
     console.log(printButton);
 console.log(printValue);
-    console.log(Timeout)
+console.log(Timeout);
+console.log(printHi);
 
 
 
     function printEnteredValue(): any {
         const numb1 = parseFloat(number1.value);
+
+        
         printValue.textContent = numb1.toString();
       
-    };
+};
+    
+
 
     printButton.addEventListener("click", printEnteredValue);
 
@@ -31,7 +38,7 @@ function sayHi():void  {
 
 // Timeout.addEventListener("wait", sayHi);
 
-
+Timeout.addEventListener("say", sayHi)
 
 document.getElementById("timeOut")?.addEventListener("click", sayHi
     // Trigger the timeout when button is clicked
