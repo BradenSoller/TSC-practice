@@ -3,14 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Welcome!</title>
 </head>
 <body>
-    <h1>Welcome! User Input</h1>
-    <input type="number" id="num1" placeholder="Number1">
-<button id="printBtn">Print</button>
+<header>
+    <h1>Salary Calculator</h1>
+</header>
+<main>
+    <section>
+        <h2>Add Employee</h2>
 
-<h3>You Entered: <output id="enteredNumber"></output></h3>
-<script src="dist/index.js"></script>
+        <form onsubmit="handleSubmit(event)">
+
+            <input placeholder="firstName" type="text" id="firstNameInput" data-testid="firstNameInput">
+            <input placeholder="lastName" type="text" id="lastNameInput" data-testid="lastNameInput">
+            <input placeholder="ID" type="text" id="idInput" data-testid="idInput">
+            <input placeholder="title" type="text" id="titleInput" data-testid="titleInput">
+            <input placeholder="annualSalary" type="text" id="annualSalaryInput" data-testid="annualSalaryInput">
+
+            <button data-testid="submitButton" id="submit-Button">Submit</button>
+        </form>
+
+        <h2>Employees</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>firstName</th>
+                    <th>lastName</th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Annual Salary</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+        </table>
+</main>
+
+
+<footer class="over-budget">
+    <p id="over-budget">Total Monthly: $0 </p>
+</footer>
 </body>
 </html>
