@@ -1,9 +1,9 @@
 let monthlyCap:any = 0;
 
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('employeeForm') as HTMLFormElement;
-    form.addEventListener('submit', handleSubmit); // Event listener to handle form submission
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     const form = document.getElementById('employeeForm') as HTMLFormElement;
+//     form.addEventListener('submit', handleSubmit); // Event listener to handle form submission
+// });
 
 function handleSubmit(event: Event):void {
 
@@ -34,7 +34,19 @@ function handleSubmit(event: Event):void {
     title.value = "";
     annualSalary.value = "";
 
+       monthlyCap += annualSalary / 12
+
     if (monthlyCap > 20000) {
         element.style.color = "red"
     }
+
+        element.innerHTML = "Total Monthly: $" + monthlyCap 
+ 
 }
+
+function deleteText(event:any) {
+    event.target.parentElement.parentElement.remove('td');
+}
+
+
+

@@ -1,9 +1,9 @@
 "use strict";
 let monthlyCap = 0;
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('employeeForm');
-    form.addEventListener('submit', handleSubmit); // Event listener to handle form submission
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     const form = document.getElementById('employeeForm') as HTMLFormElement;
+//     form.addEventListener('submit', handleSubmit); // Event listener to handle form submission
+// });
 function handleSubmit(event) {
     event.preventDefault();
     let firstName = document.getElementById('firstNameInput');
@@ -30,5 +30,9 @@ function handleSubmit(event) {
     if (monthlyCap > 20000) {
         element.style.color = "red";
     }
+    element.innerHTML = "Total Monthly: $" + monthlyCap;
+}
+function deleteText(event) {
+    event.target.parentElement.parentElement.remove('td');
 }
 //# sourceMappingURL=index.js.map
