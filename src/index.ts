@@ -46,7 +46,15 @@ console.log(element)
 
     if (monthlyCap > 20000) {
         element.style.color = "red"
-    }
+    } else {
+       ( monthlyCap < 20000 )
+        element.style.color = "green"
+    }  
+
+  
+
+    
+  
 
       
  

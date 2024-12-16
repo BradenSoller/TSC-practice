@@ -35,6 +35,13 @@ function handleSubmit(event) {
     if (monthlyCap > 20000) {
         element.style.color = "red";
     }
+    else {
+        (monthlyCap < 20000);
+        element.style.color = "green";
+    }
+    if (monthlyCap) {
+        element.style.color = "green";
+    }
 }
 function deleteText(event) {
     event.target.parentElement.parentElement.remove('td');
