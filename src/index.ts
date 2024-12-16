@@ -1,4 +1,4 @@
-let monthlyCap:any = 0;
+let monthlyCap:number = 0;
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     const form = document.getElementById('employeeForm') as HTMLFormElement;
@@ -15,8 +15,11 @@ function handleSubmit(event: Event):void {
     let title = document.getElementById('titleInput') as HTMLInputElement;
     let annualSalary = document.getElementById('annualSalaryInput') as HTMLInputElement;
     const element = document.getElementById('over-budget') as HTMLElement;
+console.log(element)
 
-
+    
+    const monthlySalary = parseFloat(annualSalary.value) / 12
+    
     const table = document.getElementById('tableBody') as HTMLTableElement
     table.innerHTML += `<tr>
     <td>${firstName.value}</td>
@@ -33,14 +36,19 @@ function handleSubmit(event: Event):void {
     ID.value = "";
     title.value = "";
     annualSalary.value = "";
+   
+    
 
-       monthlyCap += annualSalary / 12
+    monthlyCap += monthlySalary
+    console.log(monthlyCap)
+
+      element.innerHTML = "Total Monthly: $" + monthlyCap.toFixed(2);
 
     if (monthlyCap > 20000) {
         element.style.color = "red"
     }
 
-        element.innerHTML = "Total Monthly: $" + monthlyCap 
+      
  
 }
 

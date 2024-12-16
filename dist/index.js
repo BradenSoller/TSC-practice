@@ -12,6 +12,8 @@ function handleSubmit(event) {
     let title = document.getElementById('titleInput');
     let annualSalary = document.getElementById('annualSalaryInput');
     const element = document.getElementById('over-budget');
+    console.log(element);
+    const monthlySalary = parseFloat(annualSalary.value) / 12;
     const table = document.getElementById('tableBody');
     table.innerHTML += `<tr>
     <td>${firstName.value}</td>
@@ -27,10 +29,12 @@ function handleSubmit(event) {
     ID.value = "";
     title.value = "";
     annualSalary.value = "";
+    monthlyCap += monthlySalary;
+    console.log(monthlyCap);
+    element.innerHTML = "Total Monthly: $" + monthlyCap.toFixed(2);
     if (monthlyCap > 20000) {
         element.style.color = "red";
     }
-    element.innerHTML = "Total Monthly: $" + monthlyCap;
 }
 function deleteText(event) {
     event.target.parentElement.parentElement.remove('td');
