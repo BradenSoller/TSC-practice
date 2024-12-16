@@ -43,6 +43,8 @@ console.log(element)
     console.log(monthlyCap)
 
       element.innerHTML = "Total Monthly: $" + monthlyCap.toFixed(2);
+    //the toFixed(2) adds to decimal places
+    
 
     if (monthlyCap > 20000) {
         element.style.color = "red"
